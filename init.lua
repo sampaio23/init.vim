@@ -117,6 +117,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.keymap.set('n', '<leader>de', function()
                 vim.diagnostic.open_float()
             end)
+
+            vim.keymap.set('n', 'gd', function()
+                vim.lsp.buf.definition()
+            end)
         end
     end,
 })
